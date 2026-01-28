@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>KDEV — Portfolio</title>
+  <meta name="description" content="KDEV — 3D portfolio with scroll animations and micro-interactions." />
+
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- Background -->
+  <canvas id="bg"></canvas>
+
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="nav__left">
+      <div class="logo">KDEV</div>
+      <div class="pill">3D + Scroll FX</div>
+    </div>
+    <nav class="nav__right">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a class="btn btn--ghost" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main class="wrap">
+    <section class="hero" id="top">
+      <div class="hero__copy">
+        <h1>
+          High-impact<br />
+          <span class="grad">3D portfolio</span><br />
+          experiences.
+        </h1>
+
+        <p class="lead">
+          Scroll-driven motion, micro-interactions, and a lightweight 3D background —
+          built as pure static HTML/CSS/JS (deploys instantly on Cloudflare Pages).
+        </p>
+
+        <div class="cta">
+          <a class="btn btn--primary magnetic" href="#work" data-magnetic>
+            View Work
+            <span class="btn__shine"></span>
+          </a>
+
+          <a class="btn btn--ghost magnetic" href="#contact" data-magnetic>
+            Contact
+            <span class="btn__shine"></span>
+          </a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__num"><span data-counter="12">0</span>+</div>
+            <div class="stat__label">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num"><span data-counter="4">0</span>yrs</div>
+            <div class="stat__label">Experience</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num"><span data-counter="98">0</span>%</div>
+            <div class="stat__label">Pixel-picky</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="card">
+          <div class="card__top">
+            <div class="dot dot--r"></div>
+            <div class="dot dot--y"></div>
+            <div class="dot dot--g"></div>
+            <div class="card__title">Scene</div>
+          </div>
+          <div class="card__body">
+            <div class="meter">
+              <div class="meter__label">Scroll sync</div>
+              <div class="meter__bar"><div class="meter__fill" style="width: 78%"></div></div>
+            </div>
+            <div class="meter">
+              <div class="meter__label">Micro-interactions</div>
+              <div class="meter__bar"><div class="meter__fill" style="width: 92%"></div></div>
+            </div>
+            <div class="meter">
+              <div class="meter__label">Performance</div>
+              <div class="meter__bar"><div class="meter__fill" style="width: 86%"></div></div>
+            </div>
+
+            <div class="hint">
+              Tip: try moving your mouse around and scrolling.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span></span><span></span><span></span>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section" id="work">
+      <h2 class="section__title">Work</h2>
+      <p class="section__sub">Pinned scroll panels + hover FX cards.</p>
+
+      <div class="grid">
+        <a class="workcard" href="#" aria-label="Project 1">
+          <div class="workcard__bg"></div>
+          <div class="workcard__content">
+            <div class="tag">3D</div>
+            <h3>Neon Orbit</h3>
+            <p>Scroll-driven camera + postprocessing vibes.</p>
+          </div>
+        </a>
+
+        <a class="workcard" href="#" aria-label="Project 2">
+          <div class="workcard__bg"></div>
+          <div class="workcard__content">
+            <div class="tag">UI</div>
+            <h3>Glass UI Kit</h3>
+            <p>Polished components with magnetic hover.</p>
+          </div>
+        </a>
+
+        <a class="workcard" href="#" aria-label="Project 3">
+          <div class="workcard__bg"></div>
+          <div class="workcard__content">
+            <div class="tag">Web</div>
+            <h3>Scroll Cinema</h3>
+            <p>Timelines, pinning, sections that snap.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <h2 class="section__title">About</h2>
+      <p class="section__sub">
+        Replace this with your story. Keep it short, high signal.
+      </p>
+
+      <div class="about">
+        <div class="about__panel">
+          <h3>What I do</h3>
+          <ul>
+            <li>3D + shader-ish visuals (lightweight)</li>
+            <li>Scroll animation systems</li>
+            <li>Micro-interactions that feel expensive</li>
+          </ul>
+        </div>
+        <div class="about__panel">
+          <h3>Stack</h3>
+          <div class="chips">
+            <span>Three.js</span><span>GSAP</span><span>WebGL</span>
+            <span>TypeScript</span><span>React</span><span>Cloudflare</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <h2 class="section__title">Contact</h2>
+      <p class="section__sub">Drop your links here.</p>
+
+      <div class="contact">
+        <a class="btn btn--primary magnetic" data-magnetic href="https://github.com/WSSITTT" target="_blank" rel="noreferrer">
+          GitHub
+          <span class="btn__shine"></span>
+        </a>
+        <a class="btn btn--ghost magnetic" data-magnetic href="#" onclick="navigator.clipboard.writeText('your@email.com'); alert('Copied email'); return false;">
+          Copy email
+          <span class="btn__shine"></span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <span>© <span id="y"></span> KDEV</span>
+        <span class="sep">•</span>
+        <a href="#top">Back to top</a>
+      </footer>
+    </section>
+  </main>
+
+  <!-- libs -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- your code -->
+  <script src="./app.js"></script>
+</body>
+</html>
