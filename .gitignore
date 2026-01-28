@@ -1,0 +1,6 @@
+pushgit.py
+*.pyc
+__pycache__/
+.env
+.DS_Store
+Thumbs.db
